@@ -14,7 +14,7 @@ const Box = ({ name, percent, value }: BoxProps) => (
       <p>
         Guarde{' '}
         <span>
-          {(value * percent).toLocaleString('pt-BR', {
+          {(value * (percent / 100)).toLocaleString('pt-BR', {
             style: 'currency',
             currency: 'BRL'
           })}
